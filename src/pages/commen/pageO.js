@@ -110,3 +110,13 @@ i
     "__v": 0
   }
 ]
+
+https://5.imimg.com/data5/SELLER/Default/2023/3/294687519/FF/EZ/OQ/4039622/jbl-boombox-portable-bluetooth-speaker.jpg
+
+<div className="lg:w-3/5 w-full h-auto lg:h-40 lg:ml-8 mt-4 lg:mt-0">
+    <img
+      src="https://5.imimg.com/data5/SELLER/Default/2023/3/294687519/FF/EZ/OQ/4039622/jbl-boombox-portable-bluetooth-speaker.jpg"
+      alt="Speaker"
+      className="w-full h-full object-cover rounded-lg"
+    />
+  </div>
