@@ -1,12 +1,6 @@
 import React from "react";
-import bo1 from "../../Assets/can 1.webp";
-import bo2 from "../../Assets/can 2.webp";
-import bo3 from "../../Assets/can 3.webp";
-import bo4 from "../../Assets/can 4.webp";
 
-
-
-const PageE = () => {
+const PopularThisWik = () => {
   const products = [
     {
       id: 1,
@@ -39,7 +33,7 @@ const PageE = () => {
   ];
 
   return (
-    <div className="w-full px-4 py-8">
+    <div className="w-full sm:w-full px-4 py-8">
       <h2 className="text-2xl font-bold text-center mb-6">Popular This Week</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {products.map((product) => (
@@ -75,4 +69,4 @@ const PageE = () => {
   );
 };
 
-export default PageE;
+export default PopularThisWik;

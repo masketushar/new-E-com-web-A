@@ -1,9 +1,9 @@
 import React from "react";
 
-const PageB = () => {
+const DressStyle = () => {
   return (
     <div className="flex flex-col items-center overflow-hidden shadow-lg p-2 justify-center min-h-screen bg-gray-100">
-      <div className="bg-white p-6 rounded-lg shadow-lg">
+      <div className="bg-white lg:p-6 rounded-lg shadow-lg">
         <h1 className="text-2xl text-center font-bold mb-4">
           BROWSE BY DRESS STYLE
         </h1>
@@ -16,7 +16,7 @@ const PageB = () => {
                 "https://ik.imagekit.io/lw5o8hsaiw/E-commerce/Data-Tushar/2nd%20BROWSE%20BY%20DRESS%20STYLE/casual%20C-pageB-1st-man-in%20casual.avif?updatedAt=1737444135612"
               }
               alt="Casual"
-              className="px-4 py-4 w-full"
+              className="lg:px-4 lg:py-4 w-full"
               style={{ borderRadius: "3rem" }}
             />
             <p className="mt-8 ml-10 text-black text-3xl absolute">
@@ -29,7 +29,7 @@ const PageB = () => {
                 "https://ik.imagekit.io/lw5o8hsaiw/E-commerce/Data-Tushar/2nd%20BROWSE%20BY%20DRESS%20STYLE/formal1%20-pageB-2nd-img-cute-girl-in-formal.jpg?updatedAt=1737444143119"
               }
               alt="Formal"
-              className="px-4 py-4"
+              className="lg:px-4 lg:py-4"
               style={{ borderRadius: "3rem" }}
             />
             <p className="mt-8 ml-10 text-black text-3xl absolute">
@@ -46,7 +46,7 @@ const PageB = () => {
                 "https://ik.imagekit.io/lw5o8hsaiw/E-commerce/Data-Tushar/2nd%20BROWSE%20BY%20DRESS%20STYLE/party--pageB-4th-long-heir-girl-in-party-look.avif?updatedAt=1737444136982"
               }
               alt="Party"
-              className="px-4 py-4 rounded-2rem"
+              className="lg:px-4 lg:py-4 rounded-2rem"
               style={{ borderRadius: "3rem" }}
             />
             <p className="mt-8 ml-10 text-black text-3xl absolute">
@@ -59,7 +59,7 @@ const PageB = () => {
                 "https://ik.imagekit.io/lw5o8hsaiw/E-commerce/Data-Tushar/2nd%20BROWSE%20BY%20DRESS%20STYLE/gym-pageB-3rd--girl-in-gym-costum.jpg?updatedAt=1737444135324"
               }
               alt="Gym"
-              className="px-4 py-4 w-full rounded-2rem"
+              className="lg:px-4 lg:py-4 w-full rounded-2rem"
               style={{ borderRadius: "3rem" }}
             />
             <p className="mt-8 ml-10 text-black text-3xl absolute">
@@ -72,4 +72,4 @@ const PageB = () => {
   );
 };
 
-export default PageB;
+export default DressStyle;

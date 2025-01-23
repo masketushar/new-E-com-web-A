@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import PageA from "./pageA";
-import PageB from "./pageB";
-import PageC from "./pageC";
-import PageD from "./pageD";
-import PageE from "./pageE";
-import PageF from "./pageF";
+import Hero from "./Hero";
+import DressStyle from "./DressStyle";
+import BestSellingProdct from "./BestSelingProdct";
+import BrawseByCategry from "./BrawseByCategry";
+import PopularThisWik from "./PopularThisWik";
+import NewArival from "./NewArival";
 
 const products = [
   { id: 1, name: "Product A", price: 100 },
@@ -24,14 +24,12 @@ const Home = () => {
             </div>
           ))}
         </div>
-        <PageA />
-        <PageB />
-        <PageC />
-        <PageD />
-        <PageE />
-        <PageF />
-        
-       
+        <Hero />
+        <DressStyle />
+        <BestSellingProdct />
+        <BrawseByCategry />
+        <PopularThisWik />
+        <NewArival />
       </div>
     </>
   );

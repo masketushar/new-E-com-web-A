@@ -1,9 +1,9 @@
-import img1 from "../Assets/zara.png";
-import img2 from "../Assets/pose.jpg";
-import img3 from "../Assets/lacoste.png";
-import img4 from "../Assets/khatos.jpg";
-import img5 from "../Assets/suhasini.png";
-import img6 from "../Assets/logo7.png";
+import img1 from "../../Assets/zara.png";
+import img2 from "../../Assets/pose.jpg";
+import img3 from "../../Assets/lacoste.png";
+import img4 from "../../Assets/khatos.jpg";
+import img5 from "../../Assets/suhasini.png";
+import img6 from "../../Assets/logo7.png";
 import {
   FaInstagramSquare,
   FaTwitterSquare,
@@ -11,14 +11,14 @@ import {
   FaWhatsappSquare,
   FaSnapchatSquare,
 } from "react-icons/fa";
-import amp from "../Assets/Amazonpay.webp";
-import php from "../Assets/phonpay.png";
-import gay from "../Assets/gpay.png";
-import app from "../Assets/ApplePay.png";
-import alipay from "../Assets/alipay.png";
-import bitcoin from "../Assets/bitcoin.avif";
-import epay from "../Assets/epay.png";
-import wes from "../Assets/westernunionpay.png";
+import amp from "../../Assets/Amazonpay.webp";
+import php from "../../Assets/phonpay.png";
+import gay from "../../Assets/gpay.png";
+import app from "../../Assets/ApplePay.png";
+import alipay from "../../Assets/alipay.png";
+import bitcoin from "../../Assets/bitcoin.avif";
+import epay from "../../Assets/epay.png";
+import wes from "../../Assets/westernunionpay.png";
 
 const Footer = () => {
   return (

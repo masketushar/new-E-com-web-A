@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FiSearch, FiHeart, FiShoppingCart, FiUser } from "react-icons/fi";
-import log from "../Assets/logo1.png";
+import log from "../../Assets/logo1.png";
 
-const Header = () => {
+const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -130,4 +130,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default NavBar;

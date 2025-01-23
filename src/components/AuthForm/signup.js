@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [mobile, setMobile] = useState(""); // State for mobile number
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(null);
   const navigate = useNavigate();
@@ -13,13 +14,19 @@ const Signup = () => {
   const handleSignup = async (e) => {
     e.preventDefault();
 
+    // Validation for mobile number
+    if (!/^\d{10}$/.test(mobile)) {
+      setError("Please enter a valid 10-digit mobile number.");
+      return;
+    }
+
     try {
       const response = await fetch(signupApi, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ email, password, mobile }),
       });
 
       if (!response.ok) {
@@ -83,13 +90,32 @@ const Signup = () => {
               className="w-full px-4 py-2 mt-1 border rounded-md focus:ring-blue-500 focus:border-blue-500"
             />
           </div>
+          <div>
+            <label
+              htmlFor="mobile"
+              className="block text-sm font-medium text-gray-700"
+            >
+              Mobile Number
+            </label>
+            <input
+              type="tel"
+              id="mobile"
+              placeholder="1234567890"
+              value={mobile}
+              onChange={(e) => setMobile(e.target.value)}
+              required
+              className="w-full px-4 py-2 mt-1 border rounded-md focus:ring-blue-500 focus:border-blue-500"
+            />
+          </div>
           <button
             type="submit"
             className="w-full px-4 py-2 text-white bg-blue-600 rounded-md hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
           >
             Sign Up
           </button>
-          <Link to="/login"> Already have an account? Sign In</Link>
+          <Link to="/login" className="block text-center text-blue-600 hover:underline">
+            Already have an account? Sign In
+          </Link>
           {error && <div className="text-red-500 text-sm">{error}</div>}
           {success && <div className="text-green-500 text-sm">{success}</div>}
         </form>

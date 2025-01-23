@@ -1,11 +1,11 @@
 import React from "react";
 
-const PageF = () => {
+const NewArival = () => {
   return (
-    <div className="w-screen h-screen flex flex-wrap p-2 bg-white">
+    <div className="w-full h-screen overflow-hidden flex flex-wrap bg-white">
       {/* Left Container */}
       <div
-        className="w-full md:w-1/2 h-1/2 md:h-full p-2 bg-cover bg-center relative"
+        className="w-full md:w-1/2 h-1/2 md:h-full  p-2 bg-cover bg-center relative box-border"
         style={{
           backgroundImage:
             "url('https://wallpapers.com/images/hd/ps5-pictures-ylo5nmaaba2v930z.jpg')",
@@ -17,14 +17,14 @@ const PageF = () => {
           <p className="text-sm md:text-base">
             Black and White version of the PS5 <br /> coming out on sale.
           </p>
-          <button className="mt-4 bg-black-100 underline decoration-black underline-offset-5 text-sm md:text-xl text-white py-2 px-4 rounded">
+          <button className="mt-4 underline decoration-black underline-offset-5 text-sm md:text-xl text-white py-2 px-4 rounded">
             Shop Now
           </button>
         </div>
       </div>
 
       {/* Right Container */}
-      <div className="w-full md:w-1/2 h-1/2 md:h-full flex flex-col gap-2">
+      <div className="w-full md:w-1/2 h-1/2 md:h-full flex flex-col gap-2 box-border">
         {/* Top Right */}
         <div
           className="w-full h-1/2 bg-cover bg-center relative"
@@ -33,14 +33,14 @@ const PageF = () => {
               "url('https://img.freepik.com/premium-photo/mysterious-woman-black-hat-dress-posing-against-dark-background_14117-578142.jpg')",
           }}
         >
-          <div className="absolute bottom-10 left-5 text-left">
+          <div className="absolute md:bottom-10   left-5 text-left">
             <h2 className="text-lg md:text-xl text-white font-bold">
               Women's Collections
             </h2>
             <p className="text-sm md:text-base text-white">
-              Featured woman collections <br></br> that give you another vibe.
+              Featured woman collections <br /> that give you another vibe.
             </p>
-            <button className="mt-4 bg-black-100 underline decoration-black underline-offset-5 text-sm md:text-xl text-white py-2 px-4 rounded">
+            <button className="md:mt-4 underline decoration-black underline-offset-5 text-sm md:text-xl text-white py-2 px-4 rounded">
               Shop Now
             </button>
           </div>
@@ -56,12 +56,12 @@ const PageF = () => {
                 "url('https://i.guim.co.uk/img/media/f183d9937a705b78a19c48d286edd2031e262242/149_311_5091_3054/master/5091.jpg?width=1200&quality=85&auto=format&fit=max&s=580360e8abac04c989b21e67b0215a29')",
             }}
           >
-            <div className="absolute bottom-10 left-5 text-left">
-              <h2 className="text-sm md:text-lg text-white font-bold">
+            <div className="absolute md:bottom-10 left-5 text-left">
+              <h2 className="text-sm  md:text-lg text-white font-bold">
                 Speakers
               </h2>
               <p className="text-sm text-white">Amazon wireless speakers.</p>
-              <button className="mt-4 bg-black-100 underline decoration-black underline-offset-5 text-sm md:text-lg text-white py-2 px-4 rounded">
+              <button className="md:mt-4  underline decoration-black underline-offset-5 text-sm md:text-lg text-white py-2 px-4 rounded">
                 Shop Now
               </button>
             </div>
@@ -81,4 +81,4 @@ const PageF = () => {
   );
 };
 
-export default PageF;
+export default NewArival;

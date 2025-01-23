@@ -1,10 +1,8 @@
-import React from "react";
-import image1 from "../../Assets/bman2.webp"; 
-import image2 from "../../Assets/bman.png";  
+import React from "react"; 
 import { FaArrowRight } from "react-icons/fa";
 
 
-const Page = () => {
+const Hero = () => {
   return (
     <div className="flex flex-col lg:flex-row h-screen bg-white">
      
@@ -46,4 +44,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default Hero;

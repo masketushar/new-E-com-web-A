@@ -1,16 +1,15 @@
 import React from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
-import Header from "./components/Header";
-import Home from "./pages/commen/Home";
-import Product from "./pages/Product";
-import Cart from "./pages/Cart";
-import Footer from "./components/Footer";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import SingalProduct from "./pages/SingalProduct";
-import ErorPage from "./pages/ErorPage";
-import Login from "./AuthForm/login";
-import Signup from "./AuthForm/signup";
+import NavBar from "./components/Foot-Nav/NavBar";
+import Home from "./components/All-Pages/Home-Page/HomeMain";
+import Product from "./components/All-Pages/Product";
+import Cart from "./components/All-Pages/Cart";
+import Footer from "./components/Foot-Nav/Footer";
+import About from "./components/All-Pages/About";
+import Contact from "./components/All-Pages/Contact";
+import ErorPage from "./components/All-Pages/ErorPage";
+import Login from "./components/AuthForm/login";
+import Signup from "./components/AuthForm/signup";
 
 const App = () => {
   const location = useLocation();
@@ -19,16 +18,14 @@ const App = () => {
 
   return (
     <>
-      {!hideHeaderFooter && <Header />}
+      {!hideHeaderFooter && <NavBar />}
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
         <Route path="/product" element={<Product />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/singalproduct" element={<SingalProduct />} />
         <Route path="/erorpage" element={<ErorPage />} />
         <Route path="/cart" element={<Cart />} />
       </Routes>

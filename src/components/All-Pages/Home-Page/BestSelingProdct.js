@@ -1,9 +1,5 @@
 import React from "react";
 import { MdFavoriteBorder } from "react-icons/md";
-import face from "../../Assets/face wash.avif";
-import mak from "../../Assets/makeup.avif";
-import gla from "../../Assets/glasses.avif";
-import per from "../../Assets/perfume.avif";
 
 const products = [
   {
@@ -12,7 +8,8 @@ const products = [
     originalPrice: 1999,
     rating: 4,
     reviews: 105,
-    image: "https://ik.imagekit.io/lw5o8hsaiw/E-commerce/Data-Tushar/3rd%20Best%20Selling%20Products/makeup--pageC-1st-product-pic-one.avif?updatedAt=1737444135557",
+    image:
+      "https://ik.imagekit.io/lw5o8hsaiw/E-commerce/Data-Tushar/3rd%20Best%20Selling%20Products/makeup--pageC-1st-product-pic-one.avif?updatedAt=1737444135557",
   },
   {
     name: "Baby spa facewash",
@@ -20,7 +17,8 @@ const products = [
     originalPrice: 899,
     rating: 3,
     reviews: 79,
-    image: "https://ik.imagekit.io/lw5o8hsaiw/E-commerce/Data-Tushar/3rd%20Best%20Selling%20Products/face%20wash-pageC-2nd-product-pic-two.avif?updatedAt=1737444136492",
+    image:
+      "https://ik.imagekit.io/lw5o8hsaiw/E-commerce/Data-Tushar/3rd%20Best%20Selling%20Products/face%20wash-pageC-2nd-product-pic-two.avif?updatedAt=1737444136492",
   },
   {
     name: "Glasses",
@@ -28,7 +26,8 @@ const products = [
     originalPrice: 3500,
     rating: 3,
     reviews: 35,
-    image: "https://ik.imagekit.io/lw5o8hsaiw/E-commerce/Data-Tushar/3rd%20Best%20Selling%20Products/glasses-pageC-3rd-product-pic-three.avif?updatedAt=1737444136494",
+    image:
+      "https://ik.imagekit.io/lw5o8hsaiw/E-commerce/Data-Tushar/3rd%20Best%20Selling%20Products/glasses-pageC-3rd-product-pic-three.avif?updatedAt=1737444136494",
   },
   {
     name: "Lip MAXIMIZER",
@@ -36,17 +35,22 @@ const products = [
     originalPrice: 1399,
     rating: 5,
     reviews: 122,
-    image: "https://ik.imagekit.io/lw5o8hsaiw/E-commerce/Data-Tushar/3rd%20Best%20Selling%20Products/perfume-pageC-4th-product-pic-forth.avif?updatedAt=1737444143824",
+    image:
+      "https://ik.imagekit.io/lw5o8hsaiw/E-commerce/Data-Tushar/3rd%20Best%20Selling%20Products/perfume-pageC-4th-product-pic-forth.avif?updatedAt=1737444143824",
   },
 ];
 
-const PageC = () => {
+const BestSellingProdct = () => {
   return (
     <div className="py-8 px-4 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center mb-6">
           <div>
-          <div className="w-3 h-6 bg-yellow-500 rounded  flex"><span className="text-gray-700 ml-3 text-sm w-4 font-medium">ThisMonth</span></div>
+            <div className="w-3 h-6 bg-yellow-500 rounded  flex">
+              <span className="text-gray-700 ml-3 text-sm w-4 font-medium">
+                ThisMonth
+              </span>
+            </div>
             <h1 className="text-3xl font-bold text-gray-900">
               Best Selling Products
             </h1>
@@ -103,7 +107,6 @@ const PageC = () => {
                 ({product.reviews} reviews)
               </p>
               <div className="absolute top-4 right-4 flex flex-col space-y-2">
-            
                 <button className="p-2 bg-gray-100 rounded-full hover:bg-gray-200">
                   <MdFavoriteBorder className="h-5 w-5 text-gray-600" />
                 </button>
@@ -116,4 +119,4 @@ const PageC = () => {
   );
 };
 
-export default PageC;
+export default BestSellingProdct;
