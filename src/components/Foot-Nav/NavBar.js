@@ -54,21 +54,22 @@ const NavBar = () => {
               <FiSearch className="h-5 w-5" />
             </button>
           </form>
-
+<Link to="/FavoriteItems">
           <button className="text-black hover:text-yellow-300 transition relative">
             <FiHeart className="h-5 w-5" />
-          </button>
+          </button> </Link>
+          <Link to="/AddToCart">
+            <button className="text-black hover:text-yellow-300 transition relative">
+              <FiShoppingCart className="h-5 w-5" />
+              <span className="absolute top-0 right-0 bg-red-500 text-white text-xs font-bold rounded-full w-4 h-4 flex items-center justify-center">
+                0
+              </span>
+            </button>
+          </Link>
 
-          <button className="text-black hover:text-yellow-300 transition relative">
-            <FiShoppingCart className="h-5 w-5" />
-            <span className="absolute top-0 right-0 bg-red-500 text-white text-xs font-bold rounded-full w-4 h-4 flex items-center justify-center">
-              0
-            </span>
-          </button>
-
-          <button className="text-black hover:text-yellow-300 transition">
+          <Link to="/UserProfile" className="text-black hover:text-yellow-300 transition relative">
             <FiUser className="h-5 w-5" />
-          </button>
+          </Link>
         </div>
 
         <button
