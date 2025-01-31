@@ -9,9 +9,9 @@ const NavBar = () => {
   return (
     <header className="text-black shadow-md  top-0 z-50">
       <nav className="container mx-auto flex items-center justify-between py-3 px-6">
-        <Link to="/home" className="flex items-center space-x-2">
+        <span to="/home" className="flex items-center space-x-2">
           <img src={log} alt="" className="h-10 w-22" />
-        </Link>
+        </span>
 
         <div className="hidden lg:flex items-center space-x-8">
           <Link

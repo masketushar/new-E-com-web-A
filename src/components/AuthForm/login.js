@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import Cookies from "js-cookie";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -32,8 +33,8 @@ const Login = () => {
       // Check if a token is received
       if (data.token) {
         // Save the token in localStorage
-        localStorage.setItem("authToken", data.token);
-        setSuccess("Login successful! Redirecting...");
+        Cookies.set("token", data.token, { expires: 7 });
+        Cookies.set("user", data._id, { expires: 7 });
         setError(null);
 
         // Redirect to home page after a delay

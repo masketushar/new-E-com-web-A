@@ -90,12 +90,8 @@ const BrawseByCategry = () => {
           </button>
         </div>
 
-        <div className="w-full lg:w-3/5 mt-4 lg:mt-0">
-          <img
-            src="https://5.imimg.com/data5/SELLER/Default/2023/3/294687519/FF/EZ/OQ/4039622/jbl-boombox-portable-bluetooth-speaker.jpg"
-            alt="Speaker"
-            className="w-full h-full object-cover rounded-lg"
-          />
+        <div className="w-full lg:w-3/5  text-right mt-4 lg:mt-0 style={{bgImage: `url('https://5.imimg.com/data5/SELLER/Default/2023/3/294687519/FF/EZ/OQ/4039622/jbl-boombox-portable-bluetooth-speaker.jpg')`}}">
+         
         </div>
       </section>
     </div>
