@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [phoneNumber, setNumber] = useState(""); // State for mobile number
+  const [phoneNumber, setNumber] = useState(""); 
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(null);
   const navigate = useNavigate();
@@ -13,7 +13,6 @@ const Signup = () => {
   const handleSignup = async (e) => {
     e.preventDefault();
     const signupApi = "https://e-commerce-kq4s.onrender.com/user/signup";
-    // Validation for mobile number
     if (!/^\d{10}$/.test(phoneNumber)) {
       setError("Please enter a valid 10-digit mobile number.");
       return;
@@ -38,7 +37,6 @@ const Signup = () => {
       setSuccess("Signup successful! Redirecting to login...");
       setError(null);
 
-      // Redirect to login page after 1 seconds
       setTimeout(() => {
         navigate("/login");
       }, 1000);

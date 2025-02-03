@@ -1,10 +1,15 @@
 import React from "react";
-// import cont from "../../../src/Assets/contact.jpg";
 
 const Contact = () => {
   return (
-    <div className="flex flex-col lg:flex-row justify-center bg-red-300 items-center py-16 px-6">
-      <div className="bg-yellow-100 text-black p-8 rounded-lg w-80 lg:w-auto h-100 shadow-md">
+    <div className="flex flex-col lg:flex-row justify-center items-center   bg-gradient-to-tr  from-yellow-500  via-yellow-300 to-white min-h-screen bg-cover bg-center py-4 px-2">
+      <div
+        className=" text-black p-4 rounded-lg rounded-7xl lg:w-auto  shadow-md"
+        style={{
+          backgroundImage:
+            "url(https://clickdimensions.com/wp-content/uploads/2024/06/CD2411-menu-thumb_contact-us.png)",
+        }}
+      >
         <h4 className="text-xl font-semibold flex items-center">
           📞 Talk to us
         </h4>
@@ -18,9 +23,11 @@ const Contact = () => {
         </p>
       </div>
 
-      <div className="bg-white p-8 shadow-lg rounded-lg w-80 lg:w-96 mt-8 lg:mt-0 lg:ml-8">
-        <h3 className="text-2xl font-semibold text-gray-800">Contact Us</h3>
-        <form className="mt-6 space-y-4">
+      <div className="bg-white p-8 shadow-lg rounded-lg w-full max-w-md lg:w-1/3 mt-8 lg:mt-0 lg:ml-8">
+        <h3 className="text-3xl font-bold text-gray-800 mb-6 text-center">
+          Contact Us
+        </h3>
+        <form className="space-y-4">
           <div>
             <label className="block text-gray-700">Name</label>
             <input
@@ -50,14 +57,13 @@ const Contact = () => {
 
           <div>
             <label className="block text-gray-700">Your Query</label>
-            <input
-              type="text"
-              placeholder="e.g. I am interested"
-              className="w-full border px-4 py-2 rounded focus:ring-2 focus:ring-blue-500"
-            />
+            <textarea
+              placeholder=""
+              className="w-full border px-4 py-2 rounded focus:ring-2 focus:ring-blue-500 h-12"
+            ></textarea>
           </div>
 
-          <button className=" bg-green-600 text-white p-1 rounded px-4">
+          <button className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold p-2 rounded transition">
             Submit
           </button>
         </form>
