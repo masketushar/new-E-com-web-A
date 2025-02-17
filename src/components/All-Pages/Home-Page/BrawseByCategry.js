@@ -52,12 +52,12 @@ const BrawseByCategry = () => {
         </div>
       </section>
 
-      <section className="bg-black text-white h-1/2 rounded-lg p-6 flex flex-col lg:flex-row items-center justify-between">
-        <div className="mb-4 w-full lg:w-2/5 lg:mb-0">
-          <h3 className="text-4xl lg:text-7xl font-bold mb-2">
+      <section className="bg-black text-white h-1/2 rounded-lg p-6 flex flex-col w-full sm:h-full sm:w-full  lg:flex-row items-center justify-between" >
+      <div className="mb-4 w-full sm:h-full sm:w-full  lg:w-3/5  lg:mb-0" >        
+          <h3 className="text-4xl lg:text-4xl  lg:mt-2 font-bold mb-2">
             Up to <br /> 10% Off <br /> Voucher
           </h3>
-          <div className="flex space-x-2 text-lg mb-4">
+          <div className="flex space-x-2  text-lg mb-4">
             <div>
               <button className="w-20 h-20 rounded-full bg-white text-black shadow-md flex flex-col items-center justify-center font-bold">
                 <span>23</span>
@@ -75,14 +75,14 @@ const BrawseByCategry = () => {
                 <span>Minutes</span>
               </div>
 
-              <div className="w-20 h-20 rounded-full bg-white text-black shadow-md flex flex-col items-center justify-center font-bold">
+              <div className="w-20 h-20 rounded-full  bg-white text-black shadow-md flex flex-col items-center justify-center font-bold">
                 <span>35</span>
                 <span>Seconds</span>
               </div>
             </div>
           </div>
 
-          <button className="bg-yellow-500 text-white flex underline decoration-black underline-offset-5 text-left mt-2 px-2 py-2 rounded-lg font-medium hover:bg-yellow-400 transition">
+          <button className="bg-yellow-500 text-white flex underline decoration-black underline-offset-5 text-left mt-2 px-2  rounded-lg font-medium hover:bg-yellow-400 transition">
             Shop Now{" "}
             <p className="text-white ml-2 mt-2 flex text-center">
               <FaArrowRight />
@@ -90,8 +90,8 @@ const BrawseByCategry = () => {
           </button>
         </div>
 
-        <div className="w-full lg:w-3/5  text-right mt-4 lg:mt-0 style={{bgImage: `url('https://5.imimg.com/data5/SELLER/Default/2023/3/294687519/FF/EZ/OQ/4039622/jbl-boombox-portable-bluetooth-speaker.jpg')`}}">
-         
+        <div className="w-16 bg-pink-700 lg:w-2/5  text-right mt-4 lg:mt-0"style={{ backgroundImage: "url('https://media.wired.com/photos/65d8da9ff620a7044c2de43a/2:3/w_1200,h_1800,c_limit/Best-Smart-Speakers-Gear.jpg')"}}>
+{/* hear this pink box is not shoving i dont kno why in large device  */}
         </div>
       </section>
     </div>

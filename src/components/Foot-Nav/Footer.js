@@ -23,11 +23,11 @@ import wes from "../../Assets/westernunionpay.png";
 const Footer = () => {
   return (
     <footer className="bg-green-50 py-8">
-      <div className="container flex flex-col mx-auto px-4">
-        <h2 className="text-xl text-center  font-semibold mb-4">
+      <div className="container mx-auto px-4">
+        <h2 className="text-xl text-center font-semibold mb-4">
           BRANDS FOR YOU
         </h2>
-        <div className="flex flex-wrap justify-center px-4 h-4">
+        <div className="flex flex-wrap justify-center px-4">
           <img src={img1} alt="Logo1" className="h-10 mx-2" />
           <img src={img2} alt="Logo2" className="h-10 mx-2" />
           <img src={img3} alt="logo3" className="h-10 mx-2" />
@@ -36,7 +36,7 @@ const Footer = () => {
           <img src={img6} alt="Logo6" className="h-10 mx-2" />
         </div>
 
-        <div className="flex flex-wrap justify-between pt-8 items-center">
+        <div className="flex flex-wrap justify-between sm:mt-12 pt-8 items-center">
           <div className="w-full lg:w-auto mb-6 lg:mb-0">
             <h2 className="text-xl font-semibold mb-4">COMPANY INFO</h2>
             <ul>
@@ -62,7 +62,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="w-full lg:w-auto  mb-6 lg:mb-0">
+          <div className="w-full lg:w-auto mb-6 lg:mb-0">
             <h2 className="text-xl font-semibold mb-4">HELP & SUPPORT</h2>
             <ul>
               <li>
@@ -112,7 +112,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="flex flex-col">
+          <div className="flex flex-col w-full lg:w-auto">
             <div className="w-full lg:w-auto h-auto mb-6 pt-8 lg:mb-0">
               <h2 className="text-xl font-semibold mb-4">FOLLOW US</h2>
               <div className="flex gap-1 space-x-4">
@@ -134,8 +134,8 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="w-full  lg:w-auto mb-6 lg:mb-0">
-              <p>SINGNUP FOR TUSHAR'S SHOPPING STYLE NEWS </p>
+            <div className="w-full lg:w-auto mb-6 lg:mb-0">
+              <p>SIGN UP FOR TUSHAR'S SHOPPING STYLE NEWS </p>
               <h2 className="text-xl font-semibold mb-4">NEWSLETTER</h2>
               <form className="flex gap-2">
                 <input
@@ -157,9 +157,9 @@ const Footer = () => {
         <div className="flex flex-wrap justify-between items-center mt-8"></div>
 
         <div className="flex flex-wrap justify-between items-center mt-8">
-          <div className="w-full  mb-6 lg:mb-0">
+          <div className="w-full lg:w-auto mb-6 lg:mb-0">
             <h2 className="text-xl font-semibold mb-4">PAYMENT METHODS</h2>
-            <div className="flex flex-wrap  space-x-4">
+            <div className="flex flex-wrap gap-4">
               <img src={epay} alt="eBay" className="h-8" />
               <img src={app} alt="Google Pay" className="h-8" />
               <img src={gay} alt="Apple Pay" className="h-8" />

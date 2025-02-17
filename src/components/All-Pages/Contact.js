@@ -2,7 +2,7 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div className="flex flex-col lg:flex-row justify-center items-center   bg-gradient-to-tr  from-yellow-500  via-yellow-300 to-white min-h-screen bg-cover bg-center py-4 px-2">
+    <div className="flex flex-col lg:flex-row justify-center items-center bg-gradient-to-tr from-yellow-500 via-yellow-300 to-white min-h-screen bg-cover bg-center py-4 px-2">
       <div
         className=" text-black p-4 rounded-lg rounded-7xl lg:w-auto  shadow-md"
         style={{
@@ -73,3 +73,18 @@ const Contact = () => {
 };
 
 export default Contact;
+
+
+{/* <div className="flex-1 max-w-2xl mr-8">
+        <h1 className="text-4xl font-bold text-gray-800 mb-6">About Us</h1>
+        <p className="text-lg text-gray-600 leading-relaxed mb-6">
+          "Welcome to our e-commerce store! 🎉 We're here to bring you
+          top-quality products at unbeatable prices, all with exceptional
+          service. "
+        </p>
+        <p className="text-lg text-gray-600 leading-relaxed">
+        Whether you're after the latest trends or timeless classics,
+          we’ve got you covered! Shop with confidence – we’re excited to serve
+          you!
+        </p>
+      </div> */}

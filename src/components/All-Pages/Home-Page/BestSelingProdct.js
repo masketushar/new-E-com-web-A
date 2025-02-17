@@ -55,7 +55,7 @@ const BestSellingProdct = () => {
               Best Selling Products
             </h1>
           </div>
-          <button className="bg-yellow-500 text-white py-2 px-6 rounded hover:bg-yellow-600">
+          <button className="bg-yellow-500  text-white py-2 px-6 rounded hover:bg-yellow-600">
             View All
           </button>
         </div>
