@@ -35,7 +35,7 @@ const Hero = () => {
            <div className="w-2/5  flex   justify-center items-center text-7xl text-center 
             bg-black ">  <p className="text-white flex text-center"><FaArrowRight /></p>
            </div> 
-           <div className="w-3/5  bg-yellow-300  text-black text-4xl font-bold py-4 text-center cursor-pointer">
+           <div className="w-3/5  bg-yellow-300  text-black justify-center  text-4xl font-bold py-4 text-center cursor-pointer">
             <h1>READ</h1>
             <h1>MAGZ</h1>   </div>
         </div>

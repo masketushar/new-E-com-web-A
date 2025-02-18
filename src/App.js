@@ -10,6 +10,7 @@ import Signup from "./components/AuthForm/signup";
 import UserProfile from "./components/Nav Righte Section/UserProfile";
 import FavoriteItems from "./components/Nav Righte Section/FavoriteItems";
 import AddToCart from "./components/Nav Righte Section/AddToCart";
+import MyProfile from "./components/Nav Righte Section/MyProfile";
 
 const App = () => {
   const location = useLocation();
@@ -28,7 +29,7 @@ const App = () => {
         <Route path="/UserProfile" element={<UserProfile />}></Route>
         <Route path="/FavoriteItems" element={<FavoriteItems />}></Route>
         <Route path="/AddToCart" element={<AddToCart />}></Route>
-      
+        <Route path="/MyProfile" element={<MyProfile />}></Route>
       </Routes>
       {!hideHeaderFooter && <Footer />}
     </>
