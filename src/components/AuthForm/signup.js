@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [phoneNumber, setNumber] = useState(""); 
+  const [phoneNumber, setNumber] = useState("");
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(null);
   const navigate = useNavigate();

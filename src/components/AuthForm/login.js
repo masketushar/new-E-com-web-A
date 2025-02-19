@@ -39,8 +39,8 @@ const Login = () => {
 
         // Redirect to home page after a delay
         setTimeout(() => {
-          navigate("/home");
-        }, 2000);
+          navigate("/ ");
+        }, 3000);
       } else {
         setError("Login failed: Token not received.");
       }
