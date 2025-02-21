@@ -7,7 +7,7 @@ const About = () => {
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-center w-full max-w-6xl mx-auto p-6 text-center md:text-left">
-        <div className="w-full md:w-11/12 bg-black bg-opacity-50 p-8 rounded-lg shadow-lg">
+        <div className="w-full md:w-11/12 bg-black bg-opacity-50 sm:p-2 lg:p-8 rounded-lg shadow-lg">
           <h1 className="text-4xl font-extrabold text-yellow-300 mb-4">About Us</h1>
 
           <h1 className="text-6xl font-extrabold text-red-500 mb-4 animate-pulse">Sale 20% Off</h1>
