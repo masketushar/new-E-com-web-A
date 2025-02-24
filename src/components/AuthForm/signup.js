@@ -43,7 +43,7 @@ const Signup = () => {
       }, 1000);
     } catch (error) {
       console.error("Signup Error:");
-      setError("Email allready exited.");
+      setError("Email allready existed.");
       setSuccess(null);
     }
   };
