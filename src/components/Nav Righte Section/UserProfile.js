@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
 
 const UserProfile = () => {
   const navigate = useNavigate();
   const [userData, setUserData] = useState({
     name: "",
+    email: "",
     phoneNumber: "",
     dateOfBirth: "",
     gender: "",
@@ -58,16 +58,17 @@ const UserProfile = () => {
           body: JSON.stringify(userData),
         }
       );
-      console.log(response);
-      const data = await response.json();
-      console.log(data);
+
       if (response.ok) {
         alert("Profile updated successfully!");
-        navigate("/my-profile");
-        console.log(response)
+        navigate("/MyProfile");
+      } else {
+        const errorData = await response.json();
+        alert(`Failed to update profile: ${errorData.message || "Unknown error"}`);
       }
     } catch (error) {
       console.error("Error updating profile:", error);
+      alert("An error occurred while updating the profile. Please try again.");
     }
   };
 
@@ -103,6 +104,16 @@ const UserProfile = () => {
                   value={userData.name}
                   onChange={handleChange}
                   type="text"
+                  className="w-full p-3 border rounded-lg"
+                />
+              </div>
+              <div>
+                <label className="block text-gray-700 mb-1">Email</label>
+                <input
+                  name="email"
+                  value={userData.email}
+                  onChange={handleChange}
+                  type="email"
                   className="w-full p-3 border rounded-lg"
                 />
               </div>
@@ -194,13 +205,12 @@ const UserProfile = () => {
           </section>
 
           <div className="text-center">
-            <Link
-              to="/Myprofile"
+            <button
+              type="submit"
               className="bg-indigo-500 text-white py-3 px-8 rounded-lg hover:bg-indigo-600 transition shadow-lg"
             >
-              {" "}
-              Save chenges{" "}
-            </Link>{" "}
+              Save Changes
+            </button>
           </div>
         </form>
       </div>

@@ -4,7 +4,12 @@ import { FiSearch, FiHeart, FiShoppingCart, FiUser } from "react-icons/fi";
 import axios from "axios";
 import log from "../../Assets/logo1.png";
 import { useNavigate } from "react-router-dom";
+import { HiOutlineLogout } from "react-icons/hi";
 import Cookies from "js-cookie";
+
+
+
+
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,7 +18,6 @@ const NavBar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const navigate = useNavigate();
 
-  const hostId = Cookies.get("user");
   const token = Cookies.get("token");
 
   function usrProfile() {
@@ -23,7 +27,12 @@ const NavBar = () => {
       navigate("/UserProfile");
     }
   }
-
+  const handleLogout = () => {
+    Cookies.remove("token");  // Cookies se token delete karo
+    localStorage.removeItem("authToken");  // localStorage clear karo
+    sessionStorage.clear();  // sessionStorage clear karo
+        navigate("/login");  // Login page ya home page par redirect karo
+};
   // Fetch Categories
   useEffect(() => {
     axios
@@ -34,7 +43,10 @@ const NavBar = () => {
           setCategories(response.data.categories);
           console.log("Categories data:", response.data.categories);
         } else {
-          console.error("Categories data is not in expected format:", response.data);
+          console.error(
+            "Categories data is not in expected format:",
+            response.data
+          );
         }
       })
       .catch((error) => console.error("Error fetching categories:", error));
@@ -54,16 +66,28 @@ const NavBar = () => {
 
         {/* Desktop Navigation Links */}
         <div className="hidden lg:flex items-center space-x-8">
-          <Link to="/" className="text-black hover:text-yellow-300 font-medium transition">
+          <Link
+            to="/"
+            className="text-black hover:text-yellow-300 font-medium transition"
+          >
             Home
           </Link>
-          <Link to="/contact" className="text-black hover:text-yellow-300 font-medium transition">
+          <Link
+            to="/contact"
+            className="text-black hover:text-yellow-300 font-medium transition"
+          >
             Contact
           </Link>
-          <Link to="/about" className="text-black hover:text-yellow-300 font-medium transition">
+          <Link
+            to="/about"
+            className="text-black hover:text-yellow-300 font-medium transition"
+          >
             About
           </Link>
-          <Link to="/signup" className="text-black hover:text-yellow-300 font-medium transition">
+          <Link
+            to="/signup"
+            className="text-black hover:text-yellow-300 font-medium transition"
+          >
             Sign Up
           </Link>
         </div>
@@ -105,7 +129,9 @@ const NavBar = () => {
                       </p>
                     ))
                   ) : (
-                    <p className="px-4 py-2 text-sm text-gray-700">No categories available</p>
+                    <p className="px-4 py-2 text-sm text-gray-700">
+                      No categories available
+                    </p>
                   )}
                 </div>
               )}
@@ -117,7 +143,10 @@ const NavBar = () => {
               placeholder="Search here..."
               className="px-4 py-1 text-sm text-gray-700 focus:outline-none"
             />
-            <button type="submit" className="text-gray-600 hover:text-green-500 transition">
+            <button
+              type="submit"
+              className="text-gray-600 hover:text-green-500 transition"
+            >
               <FiSearch className="h-5 w-5" />
             </button>
           </form>
@@ -136,8 +165,17 @@ const NavBar = () => {
               </span>
             </button>
           </Link>
-          <button onClick={usrProfile} className="text-black hover:text-yellow-300 transition relative">
+          <button
+            onClick={usrProfile}
+            className="text-black hover:text-yellow-300 transition relative"
+          >
             <FiUser className="h-5 w-5" />
+          </button>
+          <button
+            onClick={handleLogout}
+            className="text-black bg-red-600 rounded hover:text-yellow-300 transition relative"
+          >
+            <HiOutlineLogout className="h-5 w-5" />
           </button>
         </div>
 
@@ -147,8 +185,19 @@ const NavBar = () => {
           className="lg:hidden block text-black focus:outline-none focus:ring-2 focus:ring-gray-400"
           aria-label="Toggle navigation"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
           </svg>
         </button>
       </nav>
@@ -157,16 +206,32 @@ const NavBar = () => {
       {isMenuOpen && (
         <div className="lg:hidden bg-white text-black py-4 shadow-md">
           <div className="flex flex-col items-center space-y-4">
-            <Link to="/" className="text-black hover:text-yellow-300 font-medium transition" onClick={() => setIsMenuOpen(false)}>
+            <Link
+              to="/"
+              className="text-black hover:text-yellow-300 font-medium transition"
+              onClick={() => setIsMenuOpen(false)}
+            >
               Home
             </Link>
-            <Link to="/contact" className="text-black hover:text-yellow-300 font-medium transition" onClick={() => setIsMenuOpen(false)}>
+            <Link
+              to="/contact"
+              className="text-black hover:text-yellow-300 font-medium transition"
+              onClick={() => setIsMenuOpen(false)}
+            >
               Contact
             </Link>
-            <Link to="/about" className="text-black hover:text-yellow-300 font-medium transition" onClick={() => setIsMenuOpen(false)}>
+            <Link
+              to="/about"
+              className="text-black hover:text-yellow-300 font-medium transition"
+              onClick={() => setIsMenuOpen(false)}
+            >
               About
             </Link>
-            <Link to="/signup" className="text-black hover:text-yellow-300 font-medium transition" onClick={() => setIsMenuOpen(false)}>
+            <Link
+              to="/signup"
+              className="text-black hover:text-yellow-300 font-medium transition"
+              onClick={() => setIsMenuOpen(false)}
+            >
               Sign Up
             </Link>
             {/* Mobile Search */}
@@ -177,7 +242,10 @@ const NavBar = () => {
                   placeholder="Search here..."
                   className="px-4 py-1 text-sm text-gray-700 focus:outline-none w-full"
                 />
-                <button type="submit" className="text-gray-600 hover:text-green-500 transition">
+                <button
+                  type="submit"
+                  className="text-gray-600 hover:text-green-500 transition"
+                >
                   <FiSearch className="h-5 w-5" />
                 </button>
               </form>

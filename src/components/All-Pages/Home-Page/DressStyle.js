@@ -19,8 +19,8 @@ const DressStyle = () => {
               className="lg:px-4 lg:py-4 w-full"
               style={{ borderRadius: "3rem" }}
             />
-            <p className="mt-8 ml-10 md:ml-28 text-black  text-3xl absolute">
-              Casual
+            <p className="mt-8 ml-10 md:ml-28 align-text-bottom text-black  text-3xl absolute">
+              Casual 
             </p>
           </div>
           <div className="flex w-full lg:w-2/5 rounded">
